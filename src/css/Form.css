@@ -1,0 +1,36 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  padding: 4rem;
+  border-radius: 2rem;
+  background-color: white;
+}
+
+.form--close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.form--name,
+.form--category,
+.form--content,
+.form--submit {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.form--content {
+  resize: none;
+}
+
+.form--submit {
+  cursor: pointer;
+}
