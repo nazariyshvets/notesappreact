@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { nanoid } from "nanoid";
 import CATEGORIES from "../constants/CATEGORIES";
 import Note from "../interfaces/Note";
-import "../css/Form.css";
 
 interface Props {
   note?: Note;
@@ -49,10 +48,15 @@ function Form({ note, onClose }: Props) {
   ));
 
   return (
-    <form className="form" method="post" action="#" onSubmit={handleSubmit}>
+    <form
+      className="relative flex flex-col justify-center gap-y-4 p-16 rounded-2xl bg-white"
+      method="post"
+      action="#"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
-        className="form--name"
+        className="p-2 border font-medium text-lg"
         name="name"
         value={name}
         placeholder="Name..."
@@ -60,7 +64,7 @@ function Form({ note, onClose }: Props) {
         onChange={(event) => setName(event.target.value)}
       />
       <select
-        className="form--category"
+        className="p-2 border font-medium text-lg"
         name="category"
         value={category}
         onChange={(event) => setCategory(event.target.value)}
@@ -68,7 +72,7 @@ function Form({ note, onClose }: Props) {
         {categoryOptions}
       </select>
       <textarea
-        className="form--content"
+        className="p-2 border font-medium text-lg resize-none"
         name="content"
         value={content}
         cols={30}
@@ -77,7 +81,10 @@ function Form({ note, onClose }: Props) {
         required
         onChange={(event) => setContent(event.target.value)}
       />
-      <button type="submit" className="form--submit">
+      <button
+        type="submit"
+        className="p-2 border font-medium text-lg cursor-pointer"
+      >
         Submit
       </button>
     </form>

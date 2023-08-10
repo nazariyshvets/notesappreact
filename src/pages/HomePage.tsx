@@ -7,7 +7,6 @@ import CreateNoteButton from "../components/CreateNoteButton";
 import Form from "../components/Form";
 import Note from "../interfaces/Note";
 import FormType from "../interfaces/FormType";
-import "../css/HomePage.css";
 
 function HomePage() {
   const [isArchiveActive, setIsArchiveActive] = useState(false);
@@ -22,8 +21,8 @@ function HomePage() {
   }
 
   return (
-    <div className="home-page">
-      <main>
+    <div>
+      <main className="flex flex-col justify-center gap-y-2 overflow-hidden">
         <NotesTable
           onArchiveOpen={() => setIsArchiveActive(true)}
           onFormOpen={handleFormOpen}

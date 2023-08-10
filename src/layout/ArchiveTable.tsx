@@ -11,11 +11,11 @@ function ArchiveTable() {
   ));
 
   return (
-    <table className="archive-table">
+    <table className="w-3/5 border-collapse bg-white">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th></th>
+        <tr className="border-2 border-white text-left">
+          <th className="p-2 pl-12 bg-gray text-white">Name</th>
+          <th className="p-2 bg-gray text-white"></th>
         </tr>
       </thead>
 

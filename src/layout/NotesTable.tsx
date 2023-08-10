@@ -23,20 +23,28 @@ function NotesTable({ onArchiveOpen, onFormOpen }: Props) {
   ));
 
   return (
-    <table className="notes-table">
+    <table className="w-full border-collapse bg-white">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Created</th>
-          <th>Category</th>
-          <th>Content</th>
-          <th>Dates</th>
-          <th>
-            <div className="notes-table--buttons">
-              <button title="view archive" onClick={onArchiveOpen}>
+        <tr className="border-2 border-white text-left">
+          <th className="p-2 pl-12 bg-gray text-white">Name</th>
+          <th className="p-2 bg-gray text-white">Created</th>
+          <th className="p-2 bg-gray text-white">Category</th>
+          <th className="p-2 bg-gray text-white">Content</th>
+          <th className="p-2 bg-gray text-white">Dates</th>
+          <th className="p-2 bg-gray text-white">
+            <div className="text-right">
+              <button
+                className="ml-2 border-none bg-transparent text-lg text-white cursor-pointer"
+                title="view archive"
+                onClick={onArchiveOpen}
+              >
                 <i className="fa-solid fa-folder-open"></i>
               </button>
-              <button title="remove all notes" onClick={handleRemoveAll}>
+              <button
+                className="ml-2 border-none bg-transparent text-lg text-white cursor-pointer"
+                title="remove all notes"
+                onClick={handleRemoveAll}
+              >
                 <i className="fa-solid fa-trash"></i>
               </button>
             </div>

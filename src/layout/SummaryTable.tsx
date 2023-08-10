@@ -15,12 +15,12 @@ function SummaryTable() {
   );
 
   return (
-    <table className="summary-table">
+    <table className="w-full mt-8 border-collapse bg-white">
       <thead>
-        <tr>
-          <th>Note Category</th>
-          <th>Active</th>
-          <th>Archived</th>
+        <tr className="border-2 border-white text-left">
+          <th className="p-2 pl-12 bg-gray text-white">Note Category</th>
+          <th className="p-2 bg-gray text-white">Active</th>
+          <th className="p-2 bg-gray text-white">Archived</th>
         </tr>
       </thead>
 

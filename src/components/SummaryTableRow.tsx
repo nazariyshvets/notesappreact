@@ -10,17 +10,19 @@ function SummaryTableRow({ noteCategory, activeNum, archivedNum }: Props) {
   const categoryIcon = getCategoryIcon(noteCategory);
 
   return (
-    <tr>
-      <td>
-        <div className="summary-table-row--note-category-wrapper">
+    <tr className="border-2 border-white text-left">
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple truncate">
+        <div className="flex items-center gap-x-2 gap-y-2">
           {categoryIcon}
-          <span className="summary-table-row--note-category">
-            {noteCategory}
-          </span>
+          <span className="truncate">{noteCategory}</span>
         </div>
       </td>
-      <td>{activeNum}</td>
-      <td>{archivedNum}</td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        {activeNum}
+      </td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        {archivedNum}
+      </td>
     </tr>
   );
 }

@@ -17,16 +17,16 @@ function ArchiveTableRow({ note }: Props) {
   const categoryIcon = getCategoryIcon(note.category);
 
   return (
-    <tr>
-      <td>
-        <div className="archive-table-row--name-wrapper">
+    <tr className="border-2 border-white text-left">
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple truncate">
+        <div className="flex items-center gap-x-2 gap-y-2">
           {categoryIcon}
-          <span className="archive-table-row--name">{note.name}</span>
+          <span className="truncate">{note.name}</span>
         </div>
       </td>
-      <td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray text-right truncate">
         <button
-          className="archive-table-row--unarchive"
+          className="px-4 py-1 border border-black bg-lightgray text-base text-black cursor-pointer"
           onClick={handleRemoveFromArchive}
         >
           Unarchive

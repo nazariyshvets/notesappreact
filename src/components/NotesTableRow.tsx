@@ -28,26 +28,46 @@ function NotesTableRow({ note, onEdit }: Props) {
   const dates = getDatesString(content);
 
   return (
-    <tr>
-      <td>
-        <div className="notes-table-row--name-wrapper">
+    <tr className="border-2 border-white text-left">
+      <td className="p-2 bg-opacity-70 bg-lightpurple truncate">
+        <div className="flex items-center gap-x-2 gap-y-2">
           {categoryIcon}
-          <span className="notes-table-row--name">{name}</span>
+          <span className="truncate">{name}</span>
         </div>
       </td>
-      <td>{formattedDate}</td>
-      <td>{category}</td>
-      <td>{content}</td>
-      <td>{dates}</td>
-      <td>
-        <div className="notes-table-row--buttons">
-          <button title="edit" onClick={onEdit}>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        {formattedDate}
+      </td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        {category}
+      </td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        {content}
+      </td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        {dates}
+      </td>
+      <td className="max-w-40 p-2 bg-opacity-70 bg-lightpurple text-gray truncate">
+        <div className="text-right">
+          <button
+            className="ml-2 border-none bg-transparent text-lg text-gray cursor-pointer"
+            title="edit"
+            onClick={onEdit}
+          >
             <i className="fa-solid fa-pencil"></i>
           </button>
-          <button title="add to archive" onClick={handleAddToArchive}>
+          <button
+            className="ml-2 border-none bg-transparent text-lg text-gray cursor-pointer"
+            title="add to archive"
+            onClick={handleAddToArchive}
+          >
             <i className="fa-solid fa-plus"></i>
           </button>
-          <button title="remove" onClick={handleRemove}>
+          <button
+            className="ml-2 border-none bg-transparent text-lg text-gray cursor-pointer"
+            title="remove"
+            onClick={handleRemove}
+          >
             <i className="fa-solid fa-trash"></i>
           </button>
         </div>
