@@ -91,9 +91,9 @@ table td:not(:first-child) {
   color: white;
 }
 
-.notes-table-row--name-wrapper .name,
-.summary-table-row--note-category-wrapper .name,
-.archive-table-row--name-wrapper .name {
+.notes-table-row--name,
+.summary-table-row--note-category,
+.archive-table-row--name {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
